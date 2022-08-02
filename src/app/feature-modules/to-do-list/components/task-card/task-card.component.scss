@@ -1,0 +1,21 @@
+:host {
+  background-color: whitesmoke;
+  box-shadow: 2px 2px 2px darkslateblue;
+  margin: 8px;
+  border-radius: 16px;
+  color: darkgray;
+
+  div {
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+
+    &.card__body {
+      display: block;
+      .task__title {
+        font-weight: bold;
+        color: black;
+      }
+    }
+  }
+}

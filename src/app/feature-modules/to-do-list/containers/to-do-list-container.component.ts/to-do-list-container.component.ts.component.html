@@ -1,0 +1,11 @@
+<mat-tab-group mat-align-tabs="start">
+  <mat-tab label="All">
+    <app-task-list [tasks]="tasks$ | async"></app-task-list>
+  </mat-tab>
+  <mat-tab label="Completed">
+    <app-task-list [tasks]="tasksCompleted$ | async"></app-task-list>
+  </mat-tab>
+  <mat-tab label="Pending">
+    <app-task-list [tasks]="tasksPending$ | async"></app-task-list>
+  </mat-tab>
+</mat-tab-group>

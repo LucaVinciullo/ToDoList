@@ -1,0 +1,11 @@
+<ng-container *ngIf="tasks">
+  <ng-container *ngIf="tasks.length > 0; else noResults">
+    <ng-container *ngFor="let task of tasks">
+      <app-task-card [task]="task"></app-task-card>
+    </ng-container>
+  </ng-container>
+</ng-container>
+
+<ng-template #noResults>
+  <p> No task found </p>
+</ng-template>

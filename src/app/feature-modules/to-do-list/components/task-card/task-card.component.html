@@ -1,0 +1,26 @@
+<div clas="card__header">
+  <span>
+    <!-- TODO possibly create a component to match type and icon -->
+    {{task?.type || 'TYPE'}}
+  </span>
+  <span>
+    ellipsis icon
+  </span>
+</div>
+
+<div class="card__body">
+  <small *ngIf="task?.date; else today"> {{task?.date | date: 'dd MMM yyyy - hh:mm'}} </small>
+  <ng-template #today>
+    <small> {{date | date: 'dd MMM yyyy - hh:mm'}} </small>
+  </ng-template>
+  <p class="task__title"> {{task?.title}} </p>
+</div>
+<div class="card__footer">
+  <span>
+    <!-- TODO possibly create a component to match type and icon -->
+    {{task?.tag || 'TAG'}}
+  </span>
+  <span>
+    PICTURE
+  </span>
+</div>
